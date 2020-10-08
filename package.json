@@ -1,0 +1,24 @@
+{
+  "name": "signaturefrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./js/login.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernd123/signaturefrontend.git"
+  },
+  "author": "Fernando Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernd123/signaturefrontend/issues"
+  },
+  "homepage": "./"
+}
