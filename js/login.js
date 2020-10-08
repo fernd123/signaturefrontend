@@ -17,6 +17,7 @@ function eventListeners() {
 
 function submit(e) {
     e.preventDefault();
+    debugger;
     let name = usernameInput.value;
     let password = passwordInput.value;
 

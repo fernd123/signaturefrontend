@@ -1,0 +1,27 @@
+{
+  "name": "signaturefrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "electron": "^10.1.3"
+  },
+  "scripts": {
+    "electron-build": "electron-builder",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernd123/signaturefrontend.git"
+  },
+  "author": "Fernando Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernd123/signaturefrontend/issues"
+  },
+  "homepage": "./"
+}

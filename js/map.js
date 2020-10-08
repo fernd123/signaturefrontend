@@ -8,14 +8,16 @@ import {
     updateMeeting
 } from '../utils/meetingUtils.js';
 
-$(function () {
+var $ = require('jQuery'); 
+
+/*$(function () {
     $('.map').maphilight({
         strokeColor: '808080',
         strokeWidth: 5,
         strokeOpacity: 1,
         fillColor: '00c31d'
     });
-});
+});*/
 
 window.addEventListener("DOMContentLoaded", function (event) {
     verifyToken().then(res => {

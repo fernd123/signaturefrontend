@@ -14,10 +14,6 @@ import {
 } from './model/meeting.js';
 const meetingList = [];
 
-$(function () {
-    $('.map').maphilight();
-});
-
 window.addEventListener("DOMContentLoaded", function (event) {
     verifyToken().then(res => {
         onload(event);
