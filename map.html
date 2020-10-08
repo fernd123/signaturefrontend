@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./map.html">Aforo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="./home.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./map.html">Mapa aforo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./statistics.html">Estadísticas</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id="exitBtn">Salir</button>
+    </nav>
+
+    <div class="container">
+        <!-- Control the column width, and how they should appear on different devices -->
+        <h1 style="text-align: center; margin-bottom: 1em;">Control de aforo</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="img/plano1.png" usemap="#image-map" class="map">
+
+                <map name="image-map" id="mapimage">
+                    <area target="_blank" alt="habitacion1" title="Habitación 1" coords="289,134,17,15" shape="rect">
+                    <area target="_blank" alt="banyo" title="Baño" coords="300,15,468,134" shape="rect">
+                    <area target="_blank" alt="habitacion2" title="Habitación 2" coords="478,14,693,135" shape="rect">
+                    <area target="_blank" alt="salon" title="Salon" coords="74,220,403,407" shape="rect">
+                    <area target="_blank" alt="cocina" title="Cocina"
+                        coords="480,220,692,220,693,246,858,247,860,315,688,331,481,327" shape="poly">
+                    <area target="_blank" alt="pasillo" title="Pasillo"
+                        coords="580,409,418,408,414,205,19,206,18,144,692,144,692,205,469,206,471,339,580,342"
+                        shape="poly">
+                </map>
+            </div>
+        </div>
+        <div class="row" style="text-align: center; margin-bottom: 1em; margin-top: 2em;">
+            <div class="col-sm-12">
+                <h2 id="title" style="color:dimgray"></h2>
+                <div id="peopleList">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js">
+    </script>
+    <script src="js/map.js" type="module"></script>
+</body>
+
+</html>

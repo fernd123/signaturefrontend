@@ -1,23 +1,47 @@
 const alertStack = [];
 
+const exitBtn = document.querySelector('#exitBtn');
+if (exitBtn != undefined)
+    exitBtn.addEventListener('click', clearSession);
+
+export function clearSession() {
+    sessionStorage.clear();
+    window.location.href = './login.html';
+}
 export function verifyToken() {
-    fetch("http://localhost:4000/token/verify", {
-            method: "GET",
-            headers: {
-                'Access-token': sessionStorage.getItem('token')
-            }
-        }).then(result => {
-            return result.json();
-        }).then(data => {
-            if (data.token === undefined) {
-                sessionStorage.clear();
-                window.location.href = './login.html';
-            } else {
-                sessionStorage.setItem('token', data.token);
-            }
-        }).catch(error => {
-            console.log(error);
-        })
+    return fetch("http://localhost:4000/token/verify", {
+        method: "GET",
+        headers: {
+            'Access-token': sessionStorage.getItem('token')
+        }
+    }).then(result => {
+        return result.json();
+    }).then(data => {
+        if (data.token === undefined) {
+            clearSession();
+        } else {
+            sessionStorage.setItem('token', data.token);
+        }
+    }).catch(error => {
+        console.log(error);
+    })
+}
+
+export function getUsers() {
+    return fetch("http://localhost:4000/user", {
+        method: "GET",
+        headers: {
+            'Access-token': sessionStorage.getItem('token'),
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }).then(result => {
+        return result.json();
+    }).then(data => {
+        return data;
+    }).catch(error => {
+        console.log(error);
+    });
 }
 
 export function showAlert(type, node, message) {

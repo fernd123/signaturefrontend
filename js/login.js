@@ -1,8 +1,4 @@
 import {
-    User
-} from './model/user.js';
-
-import {
     showAlert
 } from '../utils/utils.js';
 
@@ -15,7 +11,6 @@ eventListeners();
 function eventListeners() {
     submitBtn.addEventListener("click", submit);
     window.addEventListener("load", function (event) {
-        debugger;
         sessionStorage.clear();
     });
 }

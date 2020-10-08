@@ -2,65 +2,64 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Aforo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Mapa aforo</a>
-            </li>
-          </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./map.html">Aforo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-
-    <div class="container">
-        <!-- Control the column width, and how they should appear on different devices -->
-        <h1 style="text-align: center; margin-bottom: 1em;">Control de aforo</h1>
-        <div class="row">
-            <div class="col-sm-10">
-                <img src="img/plano1.png" usemap="#image-map" class="map">
-
-                <map name="image-map" id="mapimage">
-                    <area target="_blank" alt="habitacion1" title="habitacion1" coords="289,134,17,15" shape="rect">
-                    <area target="_blank" alt="banyo" title="banyo" coords="300,15,468,134" shape="rect">
-                    <area target="_blank" alt="habitacion2" title="habitacion2" coords="478,14,693,135" shape="rect">
-                    <area target="_blank" alt="salon" title="salon" coords="74,220,403,407" shape="rect">
-                    <area target="_blank" alt="cocina" title="cocina"
-                        coords="480,220,692,220,693,246,858,247,860,315,688,331,481,327" shape="poly">
-                    <area target="_blank" alt="pasillo" title="pasillo"
-                        coords="580,409,418,408,414,205,19,206,18,144,692,144,692,205,469,206,471,339,580,342"
-                        shape="poly">
-                </map>
-            </div>
-
-            <div class="col-sm-2">
-                <button id="registerButton" type="button" class="btn btn-primary">Registrar visita</button>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./home.html">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./map.html">Mapa aforo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./statistics.html">Estadísticas</a>
+        </li>
+      </ul>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-    <script src="js/home.js" type="module"></script>
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id="exitBtn">Salir</button>
+
+  </nav>
+
+  <div class="container" id="container">
+    <h1 style="text-align: center; margin-bottom: 1em;">Registrar visita</h1>
+    <div id="divAlert"></div>
+    <form id="signatureForm">
+      <div class="form-group">
+        <label for="userList">Usuarios</label>
+        <select class="form-control" id="userList">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="reasonList">Motivo visita</label>
+        <select class="form-control" id="reasonList">
+        </select>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="registerButton">Registrar visita</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js">
+  </script>
+  <script src="js/home.js" type="module"></script>
 </body>
 
 </html>

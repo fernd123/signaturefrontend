@@ -1,6 +1,7 @@
 export class Meeting{
-   constructor(name, reason, signature) {
-       this.name = name;
+   constructor(id, userid, reason, signature) {
+       this.id = id;
+       this.userid = userid;
        this.reason = reason;
        this.signature = signature;
        this.initDate = new Date();
